@@ -35,6 +35,15 @@ Template.menuItems.helpers({
   selectedPhone: function() {
     return Template.parentData(1).phone;
   },
+  selectedStreet: function() {
+    return Template.parentData(1).address.street;
+  },
+  selectedCity: function() {
+    return Template.parentData(1).address.city;
+  },
+  selectedState: function() {
+    return Template.parentData(1).address.state;
+  },
 
 })
 

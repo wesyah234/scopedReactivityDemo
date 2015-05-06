@@ -8,10 +8,11 @@
 
 <template name="Restaurants">
   <button type="button" class="__reinit">reinit data</button>
+  Instructions: click on a line below to pull additional fields into the client collection not originally published to the client
   <ul>
       {{#each Restaurant}}
         <li>
-            {{name}} (extra fields: phone={{phone}}, status={{status}})
+            {{name}} (extra fields: phone={{phone}}, status={{status}}, street address={{address.street}} city={{address.city}} state={{address.state}}
             {{#if currentRestaurant}}
                 {{> menuItems restaurant=_id}}
             {{/if}}
@@ -30,9 +31,12 @@
 
 <template name="menuItems">
   <ul>
-    <li class="menu">{{selectedName}}</li>
-    <li class="menu">{{selectedPhone}}</li>
-    <li class="menu">{{selectedStatus}}</li>
+    <li class="menu">name {{selectedName}}</li>
+    <li class="menu">phone {{selectedPhone}}</li>
+    <li class="menu">status {{selectedStatus}}</li>
+    <li class="menu">address.street {{selectedStreet}}</li>
+    <li class="menu">address.city {{selectedCity}}</li>
+    <li class="menu">address.state {{selectedState}}</li>
 
   </ul>
 </template>

@@ -1,6 +1,11 @@
 # drill-down Meteor demo
 
 *Meteor drill-down example using reactive scope instead of session*
+#### NOTE:
+This is a fork to illustrate the issue detailed in various places ( <a href="https://github.com/meteor/meteor/issues/998">here</a>
+<a href="https://github.com/meteor/meteor/issues/903">here</a> and
+<a href="http://stackoverflow.com/questions/22543148/meteor-users-not-synchronize-published-sub-fields-of-profile">here</a>)
+ regarding the way DDP works in that it won't pull extra fields into a nested structure once you have already subscribed to some fields from that nested structure
 
 #### Look Mom! No Session vars!
 
